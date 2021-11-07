@@ -16,9 +16,6 @@ const Navbar = ({title, icon}) => {
         <Fragment>
             <li>Hello {user && user.user.name} | </li>
             <li>
-                    <Link to='/'>Home</Link>
-            </li>
-            <li>
                     <Link to='/about'>About</Link>
             </li>
             <li>
