@@ -2,6 +2,7 @@ import {
     GET_CONTACTS,
     ADD_CONTACT,
     DELETE_CONTACT,
+    CLEAR_CONTACTS,
     SET_CURRENT,
     CLEAR_CURRENT,
     UPDATE_CONTACT,
@@ -35,6 +36,14 @@ const contactReducer = (state, action) => {
                 ...state,
                 contacts: state.contacts.filter(contact => contact.id !== action.payload),
                 loading:false
+            }
+        case CLEAR_CONTACTS:
+            return{
+                ...state,
+                contacts:null,
+                filtered:null,
+                error:null,
+                current:null
             }
         case SET_CURRENT:
             return{

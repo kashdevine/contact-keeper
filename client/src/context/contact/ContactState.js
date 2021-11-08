@@ -77,6 +77,11 @@ const ContactState = props => {
 
     }
 
+    // Clear Contacts
+    const clearContacts = () =>{
+        dispatch({type:CLEAR_CONTACTS})
+    }
+
     // Set current contact
     const setCurrent = contact =>{
         dispatch({type:SET_CURRENT, payload:contact})
@@ -116,7 +121,8 @@ const ContactState = props => {
             clearCurrent,
             updateContact,
             filterContacts,
-            clearfilter
+            clearfilter,
+            clearContacts
         }}>
             {props.children}
         </contactContext.Provider>
