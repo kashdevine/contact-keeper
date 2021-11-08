@@ -6,13 +6,13 @@ export const ContactItem = ({contact}) => {
     const contactContext = useContext(ContactContext);
 
     const {delectContact, setCurrent, clearCurrent} = contactContext;
+    const {_id, name, email, phone, type} = contact;
 
     const onDelete  = () =>{
-        delectContact(id);
+        delectContact(_id);
         clearCurrent();
     }
 
-    const {id, name, email, phone, type} = contact;
 
     return (
         <div className='card bg-light'>
