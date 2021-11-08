@@ -17,12 +17,12 @@ export const ContactItem = ({contact}) => {
     return (
         <div className='card bg-light'>
             <h3 className="text-primary text-left">
-                {name}{' '} 
-                <span style={{float:'right'}} 
+                {name}{' '}
+                <span style={{float:'right'}}
                 className={
                     'badge ' + (type === 'professional' ? 'badge-success' : 'badge-primary')
-                }
-                >
+                     
+                }>
                 {type.charAt(0).toUpperCase() + type.slice(1)}
                 </span>
             </h3>
